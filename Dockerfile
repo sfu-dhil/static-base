@@ -14,4 +14,5 @@ RUN chmod a+x /usr/local/bin/saxon \
         ant \
         ant-contrib \
         imagemagick \
+        jing \
     && npm install -g sass
