@@ -10,8 +10,8 @@ ADD https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/${SAXON_VERSION}/Saxon-
 
 COPY ./scripts/saxon.sh /usr/local/bin/saxon
 
-RUN chmod a+x /usr/local/bin/saxon \
-    && chmod a+x /usr/local/saxon.jar \
+RUN chmod a+rx /usr/local/bin/saxon \
+    && chmod a+rx /usr/local/saxon.jar \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         ant \
