@@ -19,4 +19,4 @@ RUN chmod a+rx /usr/local/bin/saxon \
         imagemagick \
         jing \
         curl \
-    && npm install -g sass
+    && npm install -g sass esbuild
