@@ -19,4 +19,5 @@ RUN chmod a+rx /usr/local/bin/saxon \
         imagemagick \
         jing \
         curl \
+        git \
     && npm install -g sass
