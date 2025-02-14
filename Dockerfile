@@ -1,4 +1,4 @@
-FROM node:lts-bullseye
+FROM node:current-bullseye-slim
 # Set LANG to UTF-8
 ENV LANG C.UTF-8
 WORKDIR /var/www
