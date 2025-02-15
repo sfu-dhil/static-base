@@ -19,4 +19,7 @@ RUN chmod a+rx /usr/local/bin/saxon \
         imagemagick \
         jing \
         git \
+        pandoc \
     && npm install -g sass
+
+COPY --from=pandoc/minimal:latest /usr/local/bin/pandoc /usr/bin/pandoc
