@@ -12,7 +12,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -96,6 +96,10 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: ${{ env.REGISTRY_IMAGE }}
+        # need to force latest to update all the time (since we're working off main and not tags)
+        # by default it is only updated on tags
+        flavor: |
+          latest=true
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
