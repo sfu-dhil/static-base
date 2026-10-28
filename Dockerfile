@@ -1,4 +1,6 @@
-FROM node:lts-bullseye-slim
+FROM node:lts-bookworm-slim
+# Note node:lts-trixie-slim could also work
+# but might have conflicts with new versions of imagemagick
 # Set LANG to UTF-8
 ENV LANG=C.UTF-8
 WORKDIR /var/www
