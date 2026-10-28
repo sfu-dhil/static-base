@@ -18,6 +18,7 @@ RUN chmod a+rx /usr/local/bin/saxon \
         ant-contrib \
         imagemagick \
         jing \
+        libvips-tools \
         git \
         pandoc \
     && npm install -g sass
