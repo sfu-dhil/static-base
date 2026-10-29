@@ -18,11 +18,13 @@ RUN chmod a+rx /usr/local/bin/saxon \
     && apt-get install -y --no-install-recommends \
         ant \
         ant-contrib \
+        file \
+        git \
         imagemagick \
         jing \
         libvips-tools \
-        git \
         pandoc \
+    && rm -rf /var/lib/apt/lists/* \
     && npm install -g sass
 
 COPY --from=pandoc/minimal:latest /usr/local/bin/pandoc /usr/bin/pandoc
